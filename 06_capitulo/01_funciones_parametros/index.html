@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase 36 - Var, let y const: las diferencias entre ellos</title>
+  </head>
+  <body>
+    <script>
+      var person = {
+        firstName: "John",
+        lastName: "Smith",
+        age: 11,
+      };
+      function esMayorDeEdad(persona) {
+        let mensaje
+        const MAYOR_EDAD = 18
+
+        // Uncaught TypeError: Assignment to constant variable.
+        // MAYOR_EDAD = 10
+        if (persona.edad > MAYOR_EDAD) {
+          mensaje = "Es mayor de edad";
+        } else {
+          mensaje = "Es menor de edad";
+        }
+        console.log(mensaje);
+      }
+
+      esMayorDeEdad(person);
+
+      const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+       // Uncaught TypeError: Assignment to constant variable.
+       // numeros = [11]
+       numeros.push(11)
+       console.log(numeros)
+
+       for (let i = 0; i < numeros.length; i++) {
+        console.log(i)
+        }
+
+        console.log(`Terminó el for, el valor de i es ${i}`)
+    </script>
+  </body>
+</html>
