@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 49 - Cuando hace falta poner punto y coma al final de la linea</title>
+</head>
+<body>
+    <script>
+        /* 
+        No hace falta poner punto y coma al final de la linea
+
+        alert('Hola')
+        var nombre = 'Peter'
+        const saludarAPeter = function () { } 
+        
+        
+        
+        */
+
+        /* 
+        EXTREMADAMENTE INNECESARIO
+
+        // Despues de un blocke es innecesario agregar un ;
+        function saludarAPeter() {
+          console.log('lalalalala')  
+        };
+
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+        };
+
+        */
+
+        // OBLIGATORIOS
+
+        // Si ';' lanza el siguiente error Uncaught TypeError: Cannot read properties of undefined (reading '3')
+        // console.log('Hola me llamo Peter')
+        
+        // Solucion: Agregar un ;
+        // console.log('Hola me llamo Peter');
+        // [1, 2, 3].forEach(n => console.log(n * 2))
+
+        const nombre = 'Peter'
+
+        // index.html:46 Uncaught TypeError: console.log(...) is not a function
+        // console.log('Hoal mi nombre es Peter')
+        
+        // Solucion
+        // console.log('Hola mi nombre es Peter');
+        // `${nombre} es un desarrollador`
+
+
+        /* function calcularDoble(numero){
+
+            // Uncaught SyntaxError: Unexpected token ':'
+            return 
+            {
+                original: numero, doble : numero * 2
+            }
+        } */
+
+        function calcularDoble(numero){
+            return {original: numero, doble : numero * 2}
+        }
+
+    </script>
+</body>
+</html>
